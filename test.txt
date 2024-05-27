@@ -1,0 +1,18 @@
+账号:pi
+密码：123456
+ip：192.168.53.127
+
+
+2023-08-04 04:33:01 ERROR 404: Not Found.
+cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo apt-get -f -y install
+
+labelimg
+
+conda activate pytorch
+
+
+python detect.py --source ./data/test/video --weights weights/best.pt --conf 0.4
+
+python detect.py --weights weights/best.pt --conf 0.4
